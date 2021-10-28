@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.index_wrapper {
+    width:100%;
+    max-width: 1020px;
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+main {
+    height: 90vh; /* temp */
+    background-image: linear-gradient( #e6e6e6 0%,#e6e6e6 50%, transparent 50%,transparent 100%);
+    position: relative;
+    z-index: 1;
+}
+
+p.key_logo {
+    font-size: 50px;
+    /* position: relative; */
+    /* transform: translateY(-28%); */
+    position: absolute;
+    bottom: 50%;
+    left: 55%;
+    transform: translateY(10%);
+}
+
+p.key_logo::after {
+    position: absolute;
+    bottom: -42px;
+    display: block;
+    content: "Behind.";
+    color: #e6e6e6;
+    font-size: 50px;
+    transform: rotateX(180deg);
+}

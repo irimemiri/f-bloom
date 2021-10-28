@@ -1,0 +1,941 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Serif+JP&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Crimson Text','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN','Noto Serif JP', serif;
+	/* @see: https://www.attend.jp/html_170713 */
+	min-width: 1180px;
+}
+
+/* 共通ヘッダー */
+header {
+	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	background-color: rgba(255,255,255,.4);
+	line-height: 50px;
+	padding: 10px 15px;
+	z-index: 100;
+}
+
+header img {
+	vertical-align: bottom;
+}
+
+header .g_nav {
+	margin-left: auto;
+}
+
+.g_nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.g_nav ul li {
+	text-align: center;
+	line-height: 1.2;
+	font-size: 1.1em;
+	padding: 15px 10px;
+}
+
+.g_nav li a {
+	text-decoration: none;
+	padding: 5px 0;
+}
+
+.g_nav li a::after {
+  border-bottom: solid 1px #706060;
+  bottom: -20px;
+  content: "";
+  display: block;
+  transition: all .5s ease;
+  -webkit-transition: all .3s ease;
+  width: 0;
+}
+
+.g_nav li a:link, .g_nav li a:visited {
+	color: #706060;
+}
+
+.g_nav li a:hover {
+	color: #706060;
+}
+
+.g_nav li a:hover::after {
+  width: 100%;
+}
+
+/* 共通設定 */
+
+.wrapper {
+	width: 1020px;
+	background-color: #fff;
+	padding: 30px 0;
+	margin: 0 auto;
+}
+
+.wrapper section {
+	margin: 0 auto;
+	text-align: center;
+	line-height: 2.2;
+}
+
+.text_wrapper {
+	width: 630px;
+	padding: 20px 110px;
+	margin: 0 auto;
+}
+
+.f_wrapper {
+	width: 760px;
+	text-align: center;
+	padding: 30px 110px;
+	margin: 0 auto;
+}
+
+.base_btn {
+	text-decoration: none;
+	display: block;
+	background-color: #000;
+	color: #fff;
+	font-size: 1em;
+	text-align: center;
+	line-height: 46px;
+}
+
+.base_btn:hover {
+	opacity: .6;
+}
+
+/* 共通フッター */
+footer {
+	width: 100%;
+	background: linear-gradient(130deg, rgba(20,12,13,.85), rgba(20,12,13,.65));
+	color: #fff;
+}
+
+#f_logo {
+	margin-bottom: 1.2em;
+}
+
+.sns_label {
+	font-family: 'Calibri','Helvetica','Avenir','Arial', sans-serif;
+	text-align: center;
+	letter-spacing: .2em;
+	font-size: .8em;
+	margin-bottom: .5em;
+}
+
+.sns_links {
+	width: 240px;
+	list-style-type: none;
+	margin: 0 auto .7em;
+	display: flex;
+	justify-content: space-between
+}
+
+.sns_links li {
+	width: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 2em;
+	transition: .7s;
+}
+
+.sns_links li a {
+	text-decoration: none;
+	display: block;
+}
+
+.sns_links li:last-child {
+	margin-right: 0;
+}
+
+.sns_links li:hover {
+	opacity: .8;
+}
+
+.sns_links li a:link, .sns_links li a:visited {
+	color: #fff;
+}
+
+.sns_links li.twitter a:hover {
+	color: #55acee;
+}
+
+.sns_links li.instagram a:hover {
+	color: #c6529a;
+}
+
+.sns_links li.facebook a:hover {
+	color: #3b5998;
+}
+
+.f_nav ul {
+	list-style-type: none;
+	width: 630px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto .7em;
+}
+
+.f_nav li {
+	text-align: center;
+	line-height: 1.2;
+	padding: 15px 10px;
+	float: left;
+}
+
+.f_nav li a {
+	text-decoration: none;
+}
+
+.f_nav li a:link, .f_nav li a:visited {
+	color: #fff;
+}
+
+.f_nav li a:hover {
+	opacity: .6;
+}
+
+.shop_info {
+	width: 695px;
+	margin: 0 auto 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.shop_text {
+	width: 305px;
+	text-align: left;
+	padding-left: 85px;
+}
+
+.address {
+	font-size: .9em;
+	margin-bottom: 15px;
+}
+
+.biz_hour {
+	font-size: .9em;
+	margin-bottom: 25px;
+}
+
+.tel {
+	font-size: 1.6em;
+	text-align: center;
+	letter-spacing: .3em;
+	margin-bottom: 6px;
+}
+
+.tel i {
+
+}
+
+.contact {
+	background: #000;
+	text-align: center;
+	padding: 10px 20px;
+}
+
+.contact a {
+	text-decoration: none;
+}
+
+.contact:hover {
+	opacity: .6;
+}
+
+.contact a:link, .contact a:visited {
+	color: #fff;
+}
+
+#page_top {
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transform: rotate(90deg);
+    font-size: .9em;
+    line-height: 1.5rem;
+    color: #000;
+    padding: 0 0 0 35px;
+    border-top: solid 1px;
+}
+#page_top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 15px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+}
+
+small {
+	color: #170A0B;
+	margin-bottom: 1em;
+}
+
+.copyright {
+	display: inline-block;
+}
+
+.copyright::after {
+	display: inline-block;
+	content: "|";
+	margin: .5em;
+}
+
+small a:link, small a:visited {
+	text-decoration: none;
+	color: #170A0B;
+}
+
+small a:hover {
+	text-decoration: underline;
+	color: #170A0B;
+}
+
+/* 個別設定 */
+
+.slider li {
+	list-style-type: none;
+    /* background-imageは個別設定する*/
+	display: block;
+	width: 1200px;
+	height: 100vh;
+    background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.slider .main_01 {
+	background-image: url("../img/main_01.jpg");
+}
+
+.slider .main_02 {
+	background-image: url("../img/main_02.jpg");
+}
+
+/* 動的に付与するクラス */
+.slide-animation {
+    animation: fadezoom 10s forwards;
+}
+
+.slide_area {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 55px;
+}
+
+.concept .concept_text {
+	width: 370px;
+	padding: 0 65px;
+	position: absolute;
+	top: 50vh;
+	transform: translateY(-50%);
+	right: 5%;
+	color: rgb(120,10,10);
+	text-align: right;
+	text-shadow: 0px 0px 10px rgba(255,255,255,1);
+	/* 画像に合わせる */
+	animation: fade-text 10s forwards;
+}
+
+.concept .concept_text h2 {
+	font-size: 2em;
+	line-height: 1.6;
+	font-weight: bold;
+	letter-spacing: .25em;
+	margin-bottom: 2.5em;
+}
+
+.concept .concept_text .detail {
+	font-size: 1.2em;
+	line-height: 2.5;
+	font-weight: bold;
+	margin-bottom: 2.5em;
+}
+
+.concept .concept_text .signature {
+	font-size: 1em;
+}
+
+@media(min-width:700px) {
+	.concept .concept_text p {
+		display: block;		
+	} 	
+}
+
+@media(max-width:700px) {
+	.concept .concept_text p {
+		display: none;	
+	} 	
+}
+
+.scenes h2, .variety h2, .event h2 {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 110px;
+}
+
+.news h2 {
+	font-size: 2em;
+}
+
+.scene_text h3 span {
+    position: relative;
+    border-bottom: 1px solid #000;
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    padding: 30px 0 10px;
+    margin-bottom: 68px;
+}
+
+.scene_text h3 {
+	font-size: 1.5em;
+	margin-bottom: 68px;
+}
+
+.scene_text h3 span:after {
+	border: 10px solid transparent;
+	border-top-color: #000;
+	border-bottom-width: 0;
+	bottom: -10px;
+	transform: translateX(-50%);
+	content: "";
+	display: block;
+	left: 50%;
+	position: absolute;
+	width: 0;
+}
+
+.scene_text p {
+	line-height: 2.2;
+	margin-bottom: 10px;
+}
+
+.scenes section {
+	margin-bottom: 300px;
+	display: flex;
+	justify-content: center;
+}
+
+.scene_img {
+	position: relative;
+	width: 565px;
+	height: 560px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+#scene_1 .scene_img {
+	background-image: url("../img/scene_01.jpg");
+}
+
+#scene_2 .scene_img {
+	background-image: url("../img/scene_02.jpg");
+}
+
+#scene_2 {
+	flex-direction: row-reverse;	
+}
+
+#scene_3 .scene_img {
+	background-image: url("../img/scene_03.jpg");
+}
+
+.scenes section .scene_text {
+	width: 305px;
+	text-align: center;
+	padding: 65px;
+	float: right;
+}
+
+#scene_2 .scene_text {
+	float: left;
+}
+
+.scene_img .subtitle_bk {
+	position: absolute;
+	bottom: 30px;
+	left: 130px;
+	color: #d4d9dc;
+	font-size: 5em;
+	white-space: nowrap;
+	z-index: -1;
+}
+
+#scene_2 .subtitle_bk {
+	left: auto;
+	right: 130px;
+}
+
+.scene_img .subtitle_fr {
+	position: relative;
+	width: 100%;
+	height: 560px;
+	overflow: hidden;
+	text-shadow: 0 0 15px rgba(99,99,99,.4);
+}
+
+.scene_img .subtitle_fr:after {
+    /* contentはsceneごとに変化 */
+	position: absolute;
+	bottom: 30px;
+	left: 130px;
+	color: #fff;
+	font-size: 5em;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+#scene_1 .subtitle_fr:after {
+	content: "Scene 1: As a gift";
+}
+
+#scene_2 .subtitle_fr:after {
+	content: "Scene 2: As a part of the art";
+	left: auto;
+	right: 130px;
+}
+
+#scene_3 .subtitle_fr:after {
+	content: "Scene 3: As an interior";
+}
+
+section.variety {
+	margin-bottom: 300px;
+}
+
+.var_field {
+	position: relative;
+    padding-bottom: 766px;
+}
+
+#var_1 {
+	position: absolute;
+	top: 0;
+	left: -65px;
+}
+
+#var_2 {
+	position: absolute;
+	top: 55px;
+	left: 130px;
+	z-index: 1;
+}
+
+#var_3 {
+	position: absolute;
+	top: 180px;
+	left: 195px;
+	z-index: 10;
+}
+#var_4 {
+	position: absolute;
+	top: 113px;
+	left: 520px;
+}
+#var_5 {
+	position: absolute;
+	top: 54px;
+	left: 780px;
+}
+#var_6 {
+	position: absolute;
+	top: 332px;
+	left: 690px;
+}
+
+#var_7 {
+	position: absolute;
+	top: 527px;
+	left: 845px;
+}
+
+#var_text {
+	position: absolute;
+	bottom: 0;
+	left: 195px;
+}
+
+#var_text p {
+	line-height: 2.2;
+	margin-bottom: 6px;
+}
+
+section.event {
+	position: relative;
+	text-align: center;
+	margin-bottom: 100px;
+	z-index: 1;
+}
+
+.with_shadow {
+	position: relative;
+	width: 500px;
+	height: 360px;
+	background-color: #fff;
+	margin: 0 auto 80px;
+	background: no-repeat url("../img/eventspace.jpg");
+}
+
+.preparing {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.4);
+}
+
+.with_shadow .preparing p {
+	color: white;
+	font-size: 1.6em;
+	line-height: 50px;
+	letter-spacing: .5em;
+	padding: 140px 0;
+}
+
+.rent_space .preparing p {
+	color: white;
+	font-size: 1.4em;
+	line-height: 40px;
+	letter-spacing: .4em;
+	padding: 100px 0;
+}
+
+.preparing p span {
+	display: block;
+	font-size: 1rem;
+	line-height: 30px;
+}
+
+.with_shadow::after {
+	position: absolute;
+	content: "";
+	width: 500px;
+	height: 360px;
+	top: 20px;
+	left: 20px;
+	z-index: -10;
+	background-size: 6px 6px;
+	background-image: linear-gradient(45deg, #999 5%, transparent 5%, transparent 50%, #999 50%, #999 55%, transparent 55%, transparent);
+}
+
+.event p {
+	line-height: 2.2;
+	margin-bottom: 6px;
+}
+
+.event .base_btn {
+	width: 370px;
+	margin: 0 auto 14px;
+}
+
+section.news {
+	margin-bottom: 80px;
+}
+
+.news ul {
+	width: 635px;
+	margin: 0 auto;
+	list-style-type: none;
+	text-align: left;
+}
+
+.news ul li {
+	border-bottom: solid 1px #000;
+	padding: 8px 5px;
+}
+
+.news li a {
+	text-decoration: none;
+}
+
+.news li a span {
+	display: inline-block;
+	margin-right: 20px;
+	letter-spacing: .1em;
+}
+
+.news li a:link {
+	color: #000;
+}
+
+.news li a:visited {
+	color: rgb(120,10,10);
+}
+
+.news li a:hover {
+	opacity: .6;
+}
+
+.hero {
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+a#scroll_d {
+	font-family: 'Calibri','Helvetica','Avenir','Arial', sans-serif;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	text-decoration: none;
+	padding-top: 70px;
+}
+
+a#scroll_d:link, a#scroll_d:visited, a#scroll_d:hover {
+	color: #fff;
+}
+
+a#scroll_d span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb 1.5s infinite;
+	animation: sdb 1.5s infinite;
+	box-sizing: border-box;
+}
+
+/* About */
+
+.about_top {
+	margin-bottom: 80px;
+}
+
+section.about_text {
+	line-height: 3;
+	margin-bottom: 100px;
+}
+
+.service ul {
+	list-style-type: none;
+	width: 760px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 100px;
+}
+
+.service section {
+	width: 370px;
+}
+
+.service img {
+	vertical-align: bottom;
+}
+
+.service img, .service .rent_space {
+	margin-bottom: 10px;
+}
+
+h2.sub {
+	font-size: 1.6em;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.dots {
+	position: relative;
+	width: 8px;
+	height: 8px;
+	background-color: #000;
+	border-radius: 50%;
+	margin: 0 auto 60px;
+}
+
+.dots::before {
+	position: absolute;
+	top: 0;
+	left: -20px;
+	width: 8px;
+	height: 8px;
+	content: "";
+	display: block;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+.dots::after {
+	position: absolute;
+	top: 0;
+	right: -20px;
+	width: 8px;
+	height: 8px;
+	content: "";
+	display: block;
+	background-color: #000;
+	border-radius: 50%;	
+}
+
+.rent_space {
+	background-image: url("../img/rent.jpg");
+	width: 370px;
+	height: 240px;
+}
+
+/* PrivacyPolicy */
+
+h1 span {
+	font-size: .5em;
+	display: block;
+}
+
+h1.sub {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	margin: 150px 0 100px;
+}
+
+h2.term::before, h2.term::after{
+	content:"";
+	display:inline-block;
+	width:50px;
+	height:1px;
+	margin: 0 20px;
+	background-color: #333;
+	vertical-align: middle;
+}
+
+h2.term {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.privacy_item, .privacy_item section {
+	margin-bottom: 2em;
+}
+
+.privacy_item:last-child {
+	margin-bottom: 5em;
+}
+
+.privacy_item h3 {
+	text-align: center;
+	margin-bottom: .6em;
+}
+
+.privacy_item p {
+	line-height: 1.8;
+}
+	
+
+.privacy_item ol {
+	padding: .7em 1.5em;
+}
+
+.comp_sign {
+	text-align: right;
+}
+
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+@keyframes SlideInY {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blur {
+	display: table;
+	overflow: hidden;
+	margin: 0 auto;
+  }
+
+.blur img {
+	margin : -10px;
+}
+
+@keyframes fadezoom {
+  0% {
+    transform: scale(1);
+	filter: grayscale(40%) blur(8px);
+  }
+	25% {
+		filter: grayscale(10%) blur(0px);
+	}
+	60% {
+		filter: grayscale(0%) blur(0px);
+	}
+	100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fade-text {
+	0% {
+		opacity: 0;
+	}
+	30%, 100% {
+		opacity: 1;
+	}
+  }
+
+/* slick最初の一回のみ */
+@keyframes coloring {
+	0% {
+		filter: grayscale(80%) blur(10px);
+	}
+	20% {
+		filter: grayscale(60%) blur(5px);
+	}
+	48% {
+		filter: grayscale(38%) blur(0px);
+	}
+	96% {
+		filter: grayscale(0%) blur(0px);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
