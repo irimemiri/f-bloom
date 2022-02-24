@@ -57,8 +57,8 @@
 				<h2>Scenes</h2>
 				<section id="scene_1">
 					<div class="scene_img">
-						<p class="subtitle_bk">Scene 1: As a gift</p>
-						<div class="subtitle_fr"></div>
+						<div class="subtitle_bk" data-aos="fade-left"></div>
+						<div class="subtitle_fr" data-aos="fade-left"></div>
 					</div>
 					<div class="scene_text">
 						<h3><span>贈り物として</span></h3>
@@ -74,8 +74,8 @@
 				</section>
 				<section id="scene_2">
 					<div class="scene_img">
-						<p class="subtitle_bk">Scene 2: As a part of the art</p>
-						<div class="subtitle_fr"></div>
+						<div class="subtitle_bk" data-aos="fade-left"></div>
+						<div class="subtitle_fr" data-aos="fade-left"></div>
 					</div>
 					<div class="scene_text">
 						<h3><span>空間演出として</span></h3>
@@ -90,8 +90,8 @@
 				</section>
 				<section id="scene_3">
 					<div class="scene_img">
-							<p class="subtitle_bk">Scene 3: As an interior</p>
-							<div class="subtitle_fr"></div>
+						<div class="subtitle_bk" data-aos="fade-left"></div>
+						<div class="subtitle_fr" data-aos="fade-left"></div>
 					</div>
 					<div class="scene_text">
 						<h3><span>日常のインテリアとして</span></h3>
@@ -199,7 +199,14 @@
 					<a href="privacy_policy.html">Privacy Policy</a>
 				</small>
 			</p>
-			<script> </script>
+			<script>
+				AOS.init({
+					// offset: 100,
+					delay: 100,
+					duration: 1000,
+					once: true
+				})
+			</script>
 		</div>
 	</footer>
 </body>
