@@ -474,27 +474,10 @@ small a:hover {
 	float: left;
 }
 
-/* .scene_img .subtitle_bk {
-	position: absolute;
-	bottom: 30px;
-	left: 130px;
-	color: #d4d9dc;
-	font-size: 5em;
-	white-space: nowrap;
-	z-index: -1;
-} */
-
-/* #scene_2 .subtitle_bk {
-	left: auto;
-	right: 130px;
-} */
-
 .scene_img .subtitle_bk {
 	position: absolute;
 	width: 100%;
 	height: 560px;
-	/* overflow: hidden; */
-	/* z-index: -1; */
 }
 
 .scene_img .subtitle_bk:after {
