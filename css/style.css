@@ -350,6 +350,7 @@ small a:hover {
 
 .slide_area {
 	position: relative;
+	top: 0;
 	overflow: hidden;
 	margin-bottom: 55px;
 }
@@ -742,7 +743,7 @@ section.news {
 a#scroll_d {
 	font-family: 'Calibri','Helvetica','Avenir','Arial', sans-serif;
 	position: absolute;
-	bottom: 5.309%; /* 30/565 */
+	bottom: 5.309%;
 	left: 50%;
 	z-index: 2;
 	display: inline-block;
@@ -770,6 +771,10 @@ a#scroll_d span {
 	-webkit-animation: sdb 1.5s infinite;
 	animation: sdb 1.5s infinite;
 	box-sizing: border-box;
+}
+
+.sp_top, .sp_top .sp_top_logo {
+	display: none;
 }
 
 /* About */
@@ -944,6 +949,7 @@ h2.term {
 
 @media(max-width:960px) {
 	.sp_top {
+		display: block;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -965,6 +971,7 @@ h2.term {
 		height: auto;
 	}
 	.sp_top .sp_top_logo {
+		display: block;
 		padding: 20%;
 		position: relative;
 		z-index: 100;
