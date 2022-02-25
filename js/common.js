@@ -95,6 +95,15 @@ $(function(){
     FixedAnime();
   });
 
+  $('a.dummy_link').click(function(){
+    toastr.options = {
+      "positionClass": "toast-bottom-full-width",
+      "timeOut": "5000",
+      "preventDuplicates": true,
+    };
+    toastr.info('リンク先のページは当課題では制作していません。<br>制作したページはこちら：<a href="index.html">HOME</a>、<a href="about.html">About Us</a>、<a href="privacy_policy.html">Privacy Policy</a>');
+  });
+
   $(".menu_btn").click(function () {
     $(this).toggleClass('active');
     $(".sp_menu").toggleClass('panelactive');
