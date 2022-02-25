@@ -452,7 +452,13 @@ small a:hover {
 .scene_img_box {
 	position: relative;
 	/* width: 565px; */
-	width: 74.342%;	
+	width: 74.342%;
+}
+
+.scene_img_box:after {
+	content: "";
+	display: block;
+	padding-top: 100.892%;
 }
 
 .scene_img {
@@ -467,10 +473,6 @@ small a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 10;
-}
-
-#scene_1, #scene_2, #scene_3 {
-	width: 100%;
 }
 
 #scene_1 .scene_img {
@@ -506,17 +508,16 @@ small a:hover {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 560px;
+	height: 100%;
 }
 
 .scene_img .subtitle_bk:after {
 	/* contentはsceneごとに変化 */
 	position: absolute;
-	bottom: 20px;
+	bottom: 5.309%; /* 30/565 */
 	left: 23.008%; /* 130/565 */
-	/* color: skyblue; */
 	color: #d4d9dc;
-	font-size: 5rem;
+	font-size: 5.555vw;/*80px/1440px(laptopvw); */
 	white-space: nowrap;
 	z-index: -1;
 }
@@ -531,7 +532,7 @@ small a:hover {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 560px;
+	height: 100%;
 	overflow: hidden;
 	text-shadow: 0 0 15px rgba(99,99,99,.4);
 }
@@ -539,10 +540,10 @@ small a:hover {
 .scene_img .subtitle_fr:after {
   /* contentはsceneごとに変化 */
 	position: absolute;
-	bottom: 20px;
+	bottom: 5.309%; /* 30/565 */
 	left: 23.008%; /* 130/565 */
 	color: #fff;
-	font-size: 5em;
+	font-size: 5.555vw;/*80px/1440px(laptopvw); */
 	white-space: nowrap;
 	z-index: 1;
 }
@@ -736,7 +737,7 @@ section.news {
 a#scroll_d {
 	font-family: 'Calibri','Helvetica','Avenir','Arial', sans-serif;
 	position: absolute;
-	bottom: 20px;
+	bottom: 5.309%; /* 30/565 */
 	left: 50%;
 	z-index: 2;
 	display: inline-block;
