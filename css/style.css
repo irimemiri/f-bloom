@@ -94,11 +94,138 @@ header .g_nav {
 	line-height: 2.2;
 }
 
-/* .text_wrapper {
-	width: 630px;
-	padding: 20px 110px;
-	margin: 0 auto;
-} */
+/* ハンバーガーメニュー */
+
+/*ボタン全体の形状*/
+.menu_btn{
+	/*はじめは非表示に*/
+	display: none;
+	/*ボタンの位置*/
+	position:fixed;
+	top:8px;
+	right: 8px;
+	z-index: 9999;
+	/*ボタンの形状*/
+	background:rgba(20,12,13,.85);
+	cursor: pointer;
+	width: 50px;
+	height:50px;
+	border-radius: 3px;
+}
+
+.menu_btn span{
+	display: inline-block;
+	transition: all .4s;
+	position: absolute;
+	left: 14px;
+	height: 3px;
+	background-color: #fff;
+	width: 45%;
+}
+
+.menu_btn span:nth-of-type(1) {
+	top:15px;	
+}
+.menu_btn span:nth-of-type(2) {
+	top:23px;
+}
+.menu_btn span:nth-of-type(3) {
+	top:31px;
+}
+
+.menu_btn.active {
+	background: none;
+	display: block;
+	opacity: 0;
+}
+
+/*activeクラスが付与された後のボタンのアイコン設定*/
+.menu_btn.active span:nth-of-type(1) {
+	top: 18px;
+	left: 18px;
+	transform: translateY(6px) rotate(-45deg);
+	width: 30%;
+}
+
+.menu_btn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu_btn.active span:nth-of-type(3){
+	top: 30px;
+	left: 18px;
+	transform: translateY(-6px) rotate(45deg);
+	width: 30%;
+}
+
+.fadeDown {
+	animation: fadeDownAnime .8s forwards;
+	opacity: 0;
+	display: block;
+}
+
+@keyframes fadeDownAnime{
+	from {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.sp_menu{
+	/*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+	position:fixed;
+	z-index: -1;
+	opacity: 0;/*はじめは透過0*/
+	/*ナビの位置と形状*/
+	top:0;
+	width:100%;
+	height: 100vh;/*ナビの高さ*/
+	background:#999;
+	/*動き*/
+	transition: all 0.3s;
+}
+
+.sp_menu.panelactive{
+	opacity: 1;
+	z-index:99;
+}
+
+/*ナビゲーション*/
+.sp_menu ul {
+	display: none;
+	/*ナビゲーション天地中央揃え*/
+	position: absolute;
+	z-index: 999;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+.sp_menu.panelactive ul {
+	display: block;
+}
+
+/*リストのレイアウト設定*/
+.sp_menu li{
+list-style: none;
+	text-align: center; 
+}
+
+.sp_menu li a{
+color: #333;
+text-decoration: none;
+padding:10px;
+display: block;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+font-size: 1.4rem;
+}
 
 .f_wrapper {
 	/* width: 760px; */
@@ -242,15 +369,11 @@ footer {
 }
 
 .tel {
-	font-size: 1.6em;
+	font-size: 1.6rem;
 	text-align: center;
 	letter-spacing: .3em;
 	margin-bottom: 6px;
 }
-
-/* .tel i {
-
-} */
 
 .contact {
 	background: #000;
@@ -696,7 +819,7 @@ section.event {
 }
 
 section.news {
-	margin-bottom: 80px;
+	margin-bottom: 7.843%; /*80/1020px*/;
 }
 
 .news ul {
@@ -708,7 +831,8 @@ section.news {
 
 .news ul li {
 	border-bottom: solid 1px #000;
-	padding: 8px 5px;
+	padding: 1.259% 0.787%;
+	/* padding: 8px/635 5px; */
 }
 
 .news li a {
@@ -1003,6 +1127,10 @@ h2.term {
 		display: none;
 	}
 
+	.news ul {
+		width: 100%;
+	}
+
 	.shop_info {
 		display: block;
 	}
@@ -1020,6 +1148,9 @@ h2.term {
 		margin-bottom: 2.75%;
 	}
 
+  .tel {
+		font-size: 1rem;
+  }
   .with_shadow {
 		width: 62.254%; /*635px/1020*/;
 	}

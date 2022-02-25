@@ -55,6 +55,16 @@
 				</div>
 			</section>
 		</div>
+		<div class="menu_btn"><span></span><span></span><span></span></div>
+		<nav class="sp_menu">
+			<ul>
+				<li><a href="about.html">ABOUT US</a></li>
+				<li><a href="#">PRODUCTS</a></li>
+				<li><a href="#">EVENT SPACE</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</ul>
+		</nav>
 		<div class="wrapper">
 			<section class="scenes">
 				<h2>Scenes</h2>
@@ -208,6 +218,36 @@
 					duration: 1600,
 					once: true
 				})
+
+				//スクロールをするとハンバーガーメニューに変化するための設定を関数でまとめる
+				function FixedAnime() {
+					//ハンバーガーメニューが開いてる時は消したくないのでスルー
+					if($(".menu_btn").hasClass("active")) return;
+
+					//キーイメージの高さを取得
+					var headerH = $('.slider').outerHeight(true);
+					var scroll = $(window).scrollTop();
+					if (scroll >= headerH){
+						$('.menu_btn').addClass('fadeDown');
+					}else{
+						$('.menu_btn').removeClass('fadeDown');
+					}
+				}
+
+				$(window).scroll(function () {
+					FixedAnime();
+				});
+
+				$(".menu_btn").click(function () {
+					$(this).toggleClass('active');
+					$(".sp_menu").toggleClass('panelactive');
+				});
+
+				$("#g-navi li a").click(function () {
+					$(".menu_btn").removeClass('active');
+					$(".sp_menu").removeClass('panelactive');
+				});
+				
 			</script>
 		</div>
 	</footer>
