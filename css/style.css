@@ -948,6 +948,10 @@ h2.term {
 }
 
 @media(max-width:960px) {
+	#top_header {
+		display: none;
+	}
+
 	.sp_top {
 		display: block;
 		position: absolute;
