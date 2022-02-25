@@ -9,7 +9,8 @@
 body {
 	font-family: 'Crimson Text','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN','Noto Serif JP', serif;
 	/* @see: https://www.attend.jp/html_170713 */
-	min-width: 1180px;
+	/* TODO: 全体動くようにしてから消す */
+	/* min-width: 1180px; */
 }
 
 /* 共通ヘッダー */
@@ -78,7 +79,9 @@ header .g_nav {
 /* 共通設定 */
 
 .wrapper {
-	width: 1020px;
+	/* width: 1020px; */
+	width: 91.525%;
+	max-width: 1020px;
 	background-color: #fff;
 	padding: 30px 0;
 	margin: 0 auto;
@@ -90,14 +93,15 @@ header .g_nav {
 	line-height: 2.2;
 }
 
-.text_wrapper {
+/* .text_wrapper {
 	width: 630px;
 	padding: 20px 110px;
 	margin: 0 auto;
-}
+} */
 
 .f_wrapper {
-	width: 760px;
+	/* width: 760px; */
+	width: 64.406%;
 	text-align: center;
 	padding: 30px 110px;
 	margin: 0 auto;
@@ -137,15 +141,17 @@ footer {
 }
 
 .sns_links {
-	width: 240px;
+	/* width: 240px; */
+	width: 31.578%;
 	list-style-type: none;
 	margin: 0 auto .7em;
 	display: flex;
-	justify-content: space-between
+	justify-content: space-between;
 }
 
 .sns_links li {
-	width: 50px;
+	/* width: 50px; */
+	width: 20.833%;
 	border-radius: 50%;
 	text-align: center;
 	line-height: 50px;
@@ -184,7 +190,8 @@ footer {
 
 .f_nav ul {
 	list-style-type: none;
-	width: 630px;
+	/* width: 630px; */
+	width: 82.894%/;
 	display: flex;
 	justify-content: center;
 	margin: 0 auto .7em;
@@ -210,14 +217,16 @@ footer {
 }
 
 .shop_info {
-	width: 695px;
+	/* width: 695px; */
+	width: 91.447%;
 	margin: 0 auto 50px;
 	display: flex;
 	justify-content: center;
 }
 
 .shop_text {
-	width: 305px;
+	/* width: 305px; */
+	width: 43.884%;
 	text-align: left;
 	padding-left: 85px;
 }
@@ -239,9 +248,9 @@ footer {
 	margin-bottom: 6px;
 }
 
-.tel i {
+/* .tel i {
 
-}
+} */
 
 .contact {
 	background: #000;
@@ -316,11 +325,12 @@ small a:hover {
 
 .slider li {
 	list-style-type: none;
-    /* background-imageは個別設定する*/
+  /* background-imageは個別設定する*/
 	display: block;
-	width: 1200px;
+	/* width: 1200px; */
+	width: 100vw;
 	height: 100vh;
-    background-position: left;
+	background-position: left;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -335,7 +345,7 @@ small a:hover {
 
 /* 動的に付与するクラス */
 .slide-animation {
-    animation: fadezoom 10s forwards;
+	animation: fadezoom 10s forwards;
 }
 
 .slide_area {
@@ -345,7 +355,8 @@ small a:hover {
 }
 
 .concept .concept_text {
-	width: 370px;
+	/* width: 370px; */
+	width: 31.355%;
 	padding: 0 65px;
 	position: absolute;
 	top: 50vh;
@@ -438,13 +449,28 @@ small a:hover {
 	justify-content: center;
 }
 
-.scene_img {
+.scene_img_box {
 	position: relative;
-	width: 565px;
-	height: 560px;
+	/* width: 565px; */
+	width: 74.342%;	
+}
+
+.scene_img {
+	position: absolute;
+	/* width: 565px; */
+	/* width: 74.342%; */
+	width: 100%;
+	/* 多分これheight autoになるようにしたほうがいい */
+	/* height: 560px; */
+	padding-top: 100.892%;
 	background-position: center center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: 10;
+}
+
+#scene_1, #scene_2, #scene_3 {
+	width: 100%;
 }
 
 #scene_1 .scene_img {
@@ -464,7 +490,8 @@ small a:hover {
 }
 
 .scenes section .scene_text {
-	width: 305px;
+	/* width: 305px; */
+	width: 40.131%;
 	text-align: center;
 	padding: 65px;
 	float: right;
@@ -476,6 +503,8 @@ small a:hover {
 
 .scene_img .subtitle_bk {
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 560px;
 }
@@ -483,8 +512,8 @@ small a:hover {
 .scene_img .subtitle_bk:after {
 	/* contentはsceneごとに変化 */
 	position: absolute;
-	bottom: 30px;
-	left: 130px;
+	bottom: 20px;
+	left: 23.008%; /* 130/565 */
 	/* color: skyblue; */
 	color: #d4d9dc;
 	font-size: 5rem;
@@ -494,11 +523,13 @@ small a:hover {
 
 #scene_2 .subtitle_bk:after {
 	left: auto;
-	right: 130px;
+	right: 23.008%; /* 130/565 */
 }
 
 .scene_img .subtitle_fr {
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 560px;
 	overflow: hidden;
@@ -508,8 +539,8 @@ small a:hover {
 .scene_img .subtitle_fr:after {
   /* contentはsceneごとに変化 */
 	position: absolute;
-	bottom: 30px;
-	left: 130px;
+	bottom: 20px;
+	left: 23.008%; /* 130/565 */
 	color: #fff;
 	font-size: 5em;
 	white-space: nowrap;
@@ -523,7 +554,7 @@ small a:hover {
 #scene_2 .subtitle_fr:after, #scene_2 .subtitle_bk:after {
 	content: "Scene 2: As a part of the art";
 	left: auto;
-	right: 130px;
+	right: 23.008%; /* 130/565 */
 }
 
 #scene_3 .subtitle_fr:after, #scene_3 .subtitle_bk:after {
