@@ -94,111 +94,25 @@ header .g_nav {
 	line-height: 2.2;
 }
 
-/* ハンバーガーメニュー */
-
-/*ボタン全体の形状*/
-.menu_btn{
-	/*はじめは非表示に*/
+/* sp用のUIは隠す */
+.menu_btn {
 	display: none;
-	/*ボタンの位置*/
-	position:fixed;
-	top:8px;
-	right: 8px;
-	z-index: 9999;
-	/*ボタンの形状*/
-	background:rgba(20,12,13,.85);
-	cursor: pointer;
-	width: 50px;
-	height:50px;
-	border-radius: 3px;
 }
-
-.menu_btn span{
-	display: inline-block;
-	transition: all .4s;
-	position: absolute;
-	left: 14px;
-	height: 3px;
-	background-color: #fff;
-	width: 45%;
-}
-
-.menu_btn span:nth-of-type(1) {
-	top:15px;	
-}
-.menu_btn span:nth-of-type(2) {
-	top:23px;
-}
-.menu_btn span:nth-of-type(3) {
-	top:31px;
-}
-
-.menu_btn.active {
-	background: none;
-	display: block;
-	opacity: 0;
-}
-
-/*activeクラスが付与された後のボタンのアイコン設定*/
-.menu_btn.active span:nth-of-type(1) {
-	top: 18px;
-	left: 18px;
-	transform: translateY(6px) rotate(-45deg);
-	width: 30%;
-}
-
-.menu_btn.active span:nth-of-type(2) {
-	opacity: 0;
-}
-
-.menu_btn.active span:nth-of-type(3){
-	top: 30px;
-	left: 18px;
-	transform: translateY(-6px) rotate(45deg);
-	width: 30%;
-}
-
-.fadeDown {
-	animation: fadeDownAnime .8s forwards;
-	opacity: 0;
-	display: block;
-}
-
-@keyframes fadeDownAnime{
-	from {
-		opacity: 0;
-		transform: translateY(-100px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.sp_menu{
-	/*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+.sp_menu {
+	/*最背面*/
 	position:fixed;
 	z-index: -1;
-	opacity: 0;/*はじめは透過0*/
-	/*ナビの位置と形状*/
+	opacity: 0;
 	top:0;
 	width:100%;
-	height: 100vh;/*ナビの高さ*/
+	height: 100vh;
 	background:#999;
-	/*動き*/
-	transition: all 0.3s;
+	transition: opacity 0.5s;
 }
 
-.sp_menu.panelactive{
-	opacity: 1;
-	z-index:99;
-}
-
-/*ナビゲーション*/
+/* FIXME: 画面更新時にスタイリングなしのリストがちらつくことがあるのでspじゃなくてもスタイリングした状態にしておくことにした 要調査 */
 .sp_menu ul {
 	display: none;
-	/*ナビゲーション天地中央揃え*/
 	position: absolute;
 	z-index: 999;
 	top:50%;
@@ -206,25 +120,20 @@ header .g_nav {
 	transform: translate(-50%,-50%);
 }
 
-.sp_menu.panelactive ul {
-	display: block;
-}
-
-/*リストのレイアウト設定*/
 .sp_menu li{
-list-style: none;
+	list-style: none;
 	text-align: center; 
 }
 
 .sp_menu li a{
-color: #333;
-text-decoration: none;
-padding:10px;
-display: block;
-text-transform: uppercase;
-letter-spacing: 0.1em;
-font-weight: bold;
-font-size: 1.4rem;
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	font-size: 1.4rem;
 }
 
 .f_wrapper {
@@ -914,21 +823,22 @@ section.about_text {
 
 .service ul {
 	list-style-type: none;
-	width: 760px;
+	width: 74.509%;/*760/1020px*/
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto 100px;
+	flex-wrap: wrap;
+  margin: 0 auto;
 }
 
-.service section {
-	width: 370px;
+.service ul li {
+	width: 48.684%; /*370/760*/
 }
 
 .service img {
 	vertical-align: bottom;
 }
 
-.service img, .service .rent_space {
+.service .service_sale_img, .service .rent_space {
 	margin-bottom: 10px;
 }
 
@@ -1026,10 +936,15 @@ h2.term {
 .privacy_item p {
 	line-height: 1.8;
 }
-	
 
 .privacy_item ol {
 	padding: .7em 1.5em;
+}
+
+.text_wrapper {
+	width: 43.75% /*630/1440px*/;
+	padding: 20px 110px;
+	margin: 0 auto;
 }
 
 .comp_sign {
@@ -1072,8 +987,122 @@ h2.term {
 }
 
 @media(max-width:960px) {
-	#top_header {
+	#top_header, #sub_header {
 		display: none;
+	}
+
+	/* ハンバーガーメニュー */
+	.menu_btn{
+		display: none;
+		position:fixed;
+		top:8px;
+		right: 8px;
+		z-index: 9999;
+		background:rgba(20,12,13,.85);
+		cursor: pointer;
+		width: 50px;
+		height:50px;
+		border-radius: 3px;
+	}
+
+	.menu_btn span{
+		display: inline-block;
+		transition: all .4s;
+		position: absolute;
+		left: 14px;
+		height: 3px;
+		background-color: #fff;
+		width: 45%;
+	}
+
+	.menu_btn span:nth-of-type(1) {
+		top:15px;	
+	}
+	.menu_btn span:nth-of-type(2) {
+		top:23px;
+	}
+	.menu_btn span:nth-of-type(3) {
+		top:31px;
+	}
+
+	.menu_btn.active {
+		background: none;
+		display: block;
+		opacity: 0;
+	}
+
+	/*activeクラスが付与された後のボタンのアイコン設定*/
+	.menu_btn.active span:nth-of-type(1) {
+		top: 18px;
+		left: 18px;
+		transform: translateY(6px) rotate(-45deg);
+		width: 30%;
+	}
+
+	.menu_btn.active span:nth-of-type(2) {
+		opacity: 0;
+	}
+
+	.menu_btn.active span:nth-of-type(3){
+		top: 30px;
+		left: 18px;
+		transform: translateY(-6px) rotate(45deg);
+		width: 30%;
+	}
+
+	.fadeDown {
+		animation: fadeDownAnime .8s forwards;
+		opacity: 0;
+		display: block;
+	}
+
+	@keyframes fadeDownAnime{
+		from {
+			opacity: 0;
+			transform: translateY(-100px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.sp_menu.panelactive{
+		opacity: 1;
+		z-index:99;
+	}
+
+	/*ナビゲーション*/
+	.sp_menu ul {
+		display: none;
+		/*ナビゲーション天地中央揃え*/
+		position: absolute;
+		z-index: 999;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+	}
+
+	.sp_menu.panelactive ul {
+		display: block;
+	}
+
+	/*リストのレイアウト設定*/
+	.sp_menu li{
+		list-style: none;
+		text-align: center; 
+	}
+
+	.sp_menu li a{
+		color: #333;
+		text-decoration: none;
+		padding:10px;
+		display: block;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: bold;
+		font-size: 1.4rem;
 	}
 
 	.sp_top {
@@ -1173,6 +1202,18 @@ h2.term {
 
 	.scene_text h3 span {
 		font-size: 1.2rem;
+	}
+
+	/* About */
+	.service ul li {
+		width: 100%;
+	}
+
+	/* Privacy Policy */
+	.text_wrapper {
+		width: 80% ;
+		padding: 4.545% 10%;
+		margin: 0 auto;
 	}
 }
 

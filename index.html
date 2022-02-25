@@ -213,42 +213,6 @@
 					<a href="privacy_policy.html">Privacy Policy</a>
 				</small>
 			</p>
-			<script>
-				AOS.init({
-					duration: 1600,
-					once: true
-				})
-
-				//スクロールをするとハンバーガーメニューに変化するための設定を関数でまとめる
-				function FixedAnime() {
-					//ハンバーガーメニューが開いてる時は消したくないのでスルー
-					if($(".menu_btn").hasClass("active")) return;
-
-					//キーイメージの高さを取得
-					var headerH = $('.slider').outerHeight(true);
-					var scroll = $(window).scrollTop();
-					if (scroll >= headerH){
-						$('.menu_btn').addClass('fadeDown');
-					}else{
-						$('.menu_btn').removeClass('fadeDown');
-					}
-				}
-
-				$(window).scroll(function () {
-					FixedAnime();
-				});
-
-				$(".menu_btn").click(function () {
-					$(this).toggleClass('active');
-					$(".sp_menu").toggleClass('panelactive');
-				});
-
-				$("#g-navi li a").click(function () {
-					$(".menu_btn").removeClass('active');
-					$(".sp_menu").removeClass('panelactive');
-				});
-				
-			</script>
 		</div>
 	</footer>
 </body>
