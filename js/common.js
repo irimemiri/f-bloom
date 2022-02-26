@@ -21,7 +21,7 @@ $(function(){
   //  });
 
   // scroll back top
-  $('a[href^="#"]').click(function(){
+  $('a[href^="#"]').not('.dummy_link').click(function(){
     var speed = 500;
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
@@ -95,13 +95,17 @@ $(function(){
     FixedAnime();
   });
 
-  $('a.dummy_link').click(function(){
-    toastr.options = {
-      "positionClass": "toast-bottom-full-width",
-      "timeOut": "5000",
-      "preventDuplicates": true,
-    };
+  toastr.options = {
+    "closeButton": true,
+    "positionClass": "toast-bottom-full-width",
+    "timeOut": "3500",
+    "preventDuplicates": true,
+  };
+
+  $('a.dummy_link').click(function(event){
     toastr.info('リンク先のページは当課題では制作していません。<br>制作したページはこちら：<a href="index.html">HOME</a>、<a href="about.html">About Us</a>、<a href="privacy_policy.html">Privacy Policy</a>');
+    // リンク遷移は無効にする
+    event.preventDefault();
   });
 
   $(".menu_btn").click(function () {
