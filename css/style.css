@@ -163,7 +163,24 @@ footer {
 	width: 100%;
 	background: linear-gradient(130deg, rgba(20,12,13,.85), rgba(20,12,13,.65));
 	color: #fff;
+	/* 色付きグラデーション */
+	background:linear-gradient(130deg, #d299c2, #a6c0fe, #f68084);
+	background-size: 200% 200%;
+	animation: bggradient 20s ease infinite;
 }
+
+@keyframes bggradient{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 #f_logo {
 	margin-bottom: 1.2em;
@@ -171,6 +188,7 @@ footer {
 
 .sns_label {
 	font-family: 'Calibri','Helvetica','Avenir','Arial', sans-serif;
+	color: #333;
 	text-align: center;
 	letter-spacing: .2em;
 	font-size: .8em;
@@ -210,7 +228,7 @@ footer {
 }
 
 .sns_links li a:link, .sns_links li a:visited {
-	color: #fff;
+	color: #333;
 }
 
 .sns_links li.twitter a:hover {
@@ -246,7 +264,7 @@ footer {
 }
 
 .f_nav li a:link, .f_nav li a:visited {
-	color: #fff;
+	color: #333;
 }
 
 .f_nav li a:hover {
@@ -268,16 +286,19 @@ footer {
 }
 
 .address {
+	color: #333;
 	font-size: .9em;
 	margin-bottom: 4.918%; /*15/305*/
 }
 
 .biz_hour {
+	color: #333;
 	font-size: .9em;
 	margin-bottom: 8.196%; /* 25/305 */
 }
 
 .tel {
+	color: #333;
 	font-size: 1.6rem;
 	text-align: center;
 	letter-spacing: .3em;
@@ -285,7 +306,7 @@ footer {
 }
 
 .contact {
-	background: #000;
+	background: #333;
 	text-align: center;
 	padding: 10px 20px;
 }
@@ -312,7 +333,7 @@ footer {
     transform: rotate(90deg);
     font-size: .9em;
     line-height: 1.5rem;
-    color: #000;
+    color: #333;
     padding: 0 0 0 35px;
     border-top: solid 1px;
 }
@@ -1178,6 +1199,7 @@ h2.term {
 	}
 
   .tel {
+		color: #333;
 		font-size: 1rem;
   }
   .with_shadow {
