@@ -147,7 +147,7 @@ header .g_nav {
 .base_btn {
 	text-decoration: none;
 	display: block;
-	background-color: #000;
+	background-color: #333;
 	color: #fff;
 	font-size: 1em;
 	text-align: center;
@@ -442,19 +442,19 @@ small a:hover {
 	font-size: 1em;
 }
 
-/* @media(min-width:700px) { */
-	.concept .concept_text p {
-		display: block;		
-	} 	
-/* } */
+.concept .concept_text p {
+	display: block;		
+}
 
 .scenes h2, .variety h2, .event h2 {
 	font-size: 2em;
+	letter-spacing: .1rem;
 	text-align: center;
 	margin-bottom: 10.784%; /*110/1020px*/
 }
 
 .news h2 {
+	letter-spacing: .1rem;
 	font-size: 2em;
 }
 
