@@ -1158,6 +1158,10 @@ h2.term {
 		animation: fade-text 10s .8s forwards;
 	}
 
+	.slider li {
+		background-position: 25% 50%;
+	}
+
 	a#scroll_d {
 		opacity: 0;
 		animation: fade-text 10s 2s forwards;
