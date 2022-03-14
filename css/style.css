@@ -11,6 +11,12 @@ body {
 	/* @see: https://www.attend.jp/html_170713 */
 	/* TODO: 全体動くようにしてから消す */
 	/* min-width: 1180px; */
+	box-sizing: border-box;
+}
+
+/* TODO: 崩れているところは直す */
+img {
+	width: 100%;
 }
 
 /* 共通ヘッダー */
@@ -181,9 +187,13 @@ footer {
 	}
 }
 
-
-#f_logo {
-	margin-bottom: 1.2em;
+.f_logo {
+	margin: 0 auto;
+	width: 14.473%;
+	min-width: 110px;
+	fill: #fee;
+	mix-blend-mode: screen;
+	margin-bottom: 1.2rem;
 }
 
 .sns_label {
@@ -544,11 +554,6 @@ small a:hover {
 	width: 40.131%;
 	text-align: center;
 	padding: 6.372%; /*65px/1020px*/
-	float: right;
-}
-
-#scene_2 .scene_text {
-	float: left;
 }
 
 .scene_img .subtitle_bk {
@@ -612,58 +617,6 @@ small a:hover {
 
 section.variety {
 	margin-bottom: 300px;
-}
-
-.var_field {
-	position: relative;
-	padding-bottom: 766px;
-}
-
-#var_1 {
-	position: absolute;
-	top: 0;
-	left: -65px;
-}
-
-#var_2 {
-	position: absolute;
-	top: 55px;
-	left: 130px;
-	z-index: 1;
-}
-
-#var_3 {
-	position: absolute;
-	top: 180px;
-	left: 195px;
-	z-index: 10;
-}
-#var_4 {
-	position: absolute;
-	top: 113px;
-	left: 520px;
-}
-#var_5 {
-	position: absolute;
-	top: 54px;
-	left: 780px;
-}
-#var_6 {
-	position: absolute;
-	top: 332px;
-	left: 690px;
-}
-
-#var_7 {
-	position: absolute;
-	top: 527px;
-	left: 845px;
-}
-
-#var_text {
-	position: absolute;
-	bottom: 0;
-	left: 195px;
 }
 
 #var_text p {
@@ -743,7 +696,7 @@ section.event {
 	margin-bottom: 6px;
 }
 
-.event .base_btn {
+.variety .base_btn, .event .base_btn {
 	width: 36.274% /*370px/1020*/;
 	margin: 0 auto 14px;
 }
@@ -906,8 +859,10 @@ h2.sub {
 .rent_space {
 	position: relative;
 	background-image: url("../img/rent.jpg");
-	width: 370px;
-	height: 240px;
+	/* width: 370px;*/
+	width: 100%;
+	/* height: 240px; */
+	padding-top: 64.864%;
 }
 
 /* PrivacyPolicy */
@@ -1177,8 +1132,61 @@ h2.term {
 		display: none;	
 	}
 
+  .scenes section {
+		display: block;
+	}
+
+	.scene_img_box {
+		width: 100%;
+	}
+
+	.scenes section .scene_text {
+		width: 100%;
+		padding: 0;
+	}
+
+	.scene_text h3 {
+		margin-top: 2%;
+		margin-bottom: 1.2%;
+	}
+
+	.scene_text h3 span {
+		border-bottom: none;
+	}
+	
+	.scene_text h3 span:after {
+		display: none;
+	}
+
 	.scene_img .subtitle_bk {
 		display: none;
+	}
+
+	.scene_img .subtitle_bk:after, .scene_img .subtitle_fr:after {
+		/* 改行コードで改行できるようにする */
+		white-space: pre-wrap;
+		/* TODO: サイズによって崩れないか確認 */
+		line-height: 2.8rem;
+		text-align: left;
+		left: 4%;
+	}
+
+	#scene_1 .subtitle_fr:after, #scene_1 .subtitle_bk:after {
+		content: "Scene 1:\a As a gift";
+	}
+	
+	#scene_2 .subtitle_fr:after, #scene_2 .subtitle_bk:after {
+		content: "Scene 2:\a As a part of the art";
+		left: 4%;
+		right: 0;
+	}
+	
+	#scene_3 .subtitle_fr:after, #scene_3 .subtitle_bk:after {
+		content: "Scene 3:\a As an interior";
+	}
+
+  .service .service-item {
+		margin-bottom: 2.4%;
 	}
 
 	.news ul {
@@ -1210,7 +1218,7 @@ h2.term {
 		width: 62.254%; /*635px/1020*/;
 	}
 
-	.event .base_btn {
+	.variety .base_btn, .event .base_btn {
 		width: 62.254%; /*635px/1020*/;
 	}
 
@@ -1223,7 +1231,7 @@ h2.term {
 	}
 
 	.scene_text .formatted_text span {
-		display: inline;
+		/* display: inline; */
 	}
 
 	.scene_text h3 span {
