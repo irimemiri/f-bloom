@@ -654,7 +654,7 @@ section.variety {
 	/* width: 610px; */
 	width: 59.803%;
 	background-color: #0ff;
-	background: no-repeat url("../img/var_01.jpg");
+	background: no-repeat url("../img/var_1.jpg");
 	background-position: center;
 	background-size: cover;
 }
@@ -670,7 +670,7 @@ section.variety {
 	width: 29.901%;
 	margin-left: 5.882%; /*60/1020*/
 	margin-top: 23.529%; /*240/1020*/
-	background: no-repeat url("../img/var_03.jpg");
+	background: no-repeat url("../img/var_2.jpg");
 	background-position: center;
 	background-size: cover;
 }
@@ -682,7 +682,7 @@ section.variety {
 }
 
 .var_3 {
-	background: no-repeat url("../img/var_07.jpg");
+	background: no-repeat url("../img/var_3.jpg");
 	/* width: 240px; */
 	width: 23.529%;
 	margin-top: -4.901%; /*50/1020*/
@@ -700,7 +700,7 @@ section.variety {
 section.event {
 	position: relative;
 	text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 9.803%;/*100/1020*/
 	z-index: 1;
 }
 
@@ -883,7 +883,7 @@ a#scroll_d span {
 section.about_text {
 	width: 100%;
 	line-height: 3;
-	margin-bottom: 100px;
+	margin-bottom: 9.803%;/*100px/1020;*/
 }
 
 .service ul {
@@ -904,14 +904,14 @@ section.about_text {
 }
 
 .service .service_sale_img, .service .rent_space {
-	margin-bottom: 10px;
+	margin-bottom: 0.98%;/*10px/1020;*/
 }
 
 h2.sub {
 	font-size: 1.6em;
 	font-weight: bold;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 4.901%; /*50/1020px;*/
 }
 
 .dots {
@@ -956,6 +956,10 @@ h2.sub {
 	padding-top: 64.864%;
 }
 
+section.service {
+	margin-bottom: 7.843%; /*80/1020px*/;
+}
+
 /* PrivacyPolicy */
 
 h1 span {
@@ -975,7 +979,7 @@ h1.sub {
 h2.term::before, h2.term::after{
 	content:"";
 	display:inline-block;
-	width:50px;
+	width: 7.936%;/*50/630px;*/
 	height:1px;
 	margin: 0 20px;
 	background-color: #333;
@@ -1012,7 +1016,8 @@ h2.term {
 
 .text_wrapper {
 	width: 43.75% /*630/1440px*/;
-	padding: 20px 110px;
+	/* padding: 20px 110px; */
+	padding: 3.174% 17.46%;
 	margin: 0 auto;
 }
 
@@ -1356,6 +1361,10 @@ h2.term {
 		width: 80% ;
 		padding: 4.545% 10%;
 		margin: 0 auto;
+	}
+
+	h2.term {
+		font-size: 1.3em;
 	}
 }
 
