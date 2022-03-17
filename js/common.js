@@ -126,7 +126,4 @@ $(function(){
     $(".menu_btn").removeClass('active');
     $(".sp_menu").removeClass('panelactive');
   });
-
-  // rellax
-  var rellax = new Rellax('.rellax');
 });
