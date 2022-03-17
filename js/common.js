@@ -70,6 +70,15 @@ $(function(){
     once: true
   })
 
+  function setHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  // Initialize
+  setHeight();
+  window.addEventListener('resize', setHeight);
+
   //To transform hamberger menu
   function FixedAnime() {
     //to avoid from disappearing close btn
