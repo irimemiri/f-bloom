@@ -71,7 +71,7 @@ $(function(){
   })
 
   function setHeight() {
-    let vh = window.innerHeight * 0.01;
+    var vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
 
