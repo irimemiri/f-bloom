@@ -1021,7 +1021,7 @@ h2.term {
 .text_wrapper {
 	width: 43.75% /*630/1440px*/;
 	/* padding: 20px 110px; */
-	padding: 3.174% 17.46%;
+	padding: 0 17.46%;
 	margin: 0 auto;
 }
 
@@ -1354,6 +1354,10 @@ h2.term {
 		display: none;
 	}
 
+	.sns_links {
+		width: 50%;
+	}
+
 	/* About */
 	.service ul li {
 		width: 100%;
@@ -1367,7 +1371,7 @@ h2.term {
 	/* Privacy Policy */
 	.text_wrapper {
 		width: 80% ;
-		padding: 4.545% 10%;
+		padding: 0 10%;
 		margin: 0 auto;
 	}
 
