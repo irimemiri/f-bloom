@@ -11,8 +11,9 @@
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="js/toastr.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/rellax.min.js"></script>
+	<!-- <script src="js/rellax.min.js"></script> -->
 	<script src="js/common.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 	<link href="css/aos.css" rel="stylesheet">
 	<link href="css/toastr.min.css" rel="stylesheet">
@@ -25,7 +26,7 @@
 </head>
 <body>
 	<header id="top_header">
-		<h1><a href="#"><img src="img/head_logo.svg" alt="f-bloom" width="178" height="50"></a></h1>
+		<h1><a href="#"><p class="h_logo"><img src="img/head_logo.svg" alt="f-bloom"><div></div></a></h1>
 		<nav class="g_nav">
 			<ul>
 				<li><a href="about.html">ABOUT US</a></li>
@@ -125,23 +126,21 @@
 			</section>
 			<section class="variety">
 				<h2>Variety</h2>
-				<div class="var_imgs">
-					<img id="var_1" src="img/var_01.jpg" alt="" width="175" height="175">
-					<!-- <img id="var_2" src="img/var_02.jpg" alt="" width="240" height="240"> -->
-					<img id="var_3" src="img/var_03.jpg" alt="" width="305" height="305">
-					<img id="var_4" src="img/var_04.jpg" alt="" width="175" height="175">
-					<!-- <img id="var_5" src="img/var_05.jpg" alt="" width="175" height="175"> -->
-					<!-- <img id="var_6" src="img/var_06.jpg" alt="" width="175" height="175"> -->
-					<img id="var_7" src="img/var_07.jpg" alt="" width="240" height="240">
-				</div>
-				<div id="var_text">
-					<p>
-						ブーケ・フラワーボックスはもちろん、<br>
-						各種アレンジメント作品をご用意しています。<br>
-						オーダーメイドも承っていますので、<br>
-						お気軽にご相談ください。<br>
-					</p>
-					<a class="base_btn dummy_link" href="#">商品を見る</a>
+				<div class="var_wrap">
+					<div class="var_imgs">
+						<p class="var_1"></p>
+						<p class="var_2"></p>
+						<p class="var_3"></p>
+					</div>
+					<div id="var_text">
+						<p>
+							ブーケ・フラワーボックスはもちろん、<br>
+							各種アレンジメント作品をご用意しています。<br>
+							オーダーメイドも承っていますので、<br>
+							お気軽にご相談ください。<br>
+						</p>
+						<a class="base_btn dummy_link" href="#">商品を見る</a>
+					</div>
 				</div>
 			</section>
 			<section class="event">

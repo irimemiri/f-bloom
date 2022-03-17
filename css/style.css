@@ -12,12 +12,17 @@ body {
 	/* TODO: 全体動くようにしてから消す */
 	/* min-width: 1180px; */
 	box-sizing: border-box;
+	background-color: #fff;
 }
 
 /* TODO: 崩れているところは直す */
 img {
 	width: 100%;
 	height: auto;
+}
+
+.h_logo {
+	width: 60%;
 }
 
 /* 共通ヘッダー */
@@ -168,7 +173,6 @@ header .g_nav {
 /* 共通フッター */
 footer {
 	width: 100%;
-	background: linear-gradient(130deg, rgba(20,12,13,.85), rgba(20,12,13,.65));
 	color: #fff;
 	/* 色付きグラデーション */
 	background:linear-gradient(130deg, #d299c2, #a6c0fe, #f68084);
@@ -617,12 +621,80 @@ small a:hover {
 }
 
 section.variety {
-	margin-bottom: 300px;
+	margin-bottom: 29.411%;/*300px;*/
 }
 
 #var_text p {
 	line-height: 2.2;
 	margin-bottom: 6px;
+}
+
+#var_text {
+	/* width: 370px; */
+	width: 36.274%;
+	position: absolute;
+	bottom: 14%;/*170px*/
+	left: 8.823%;/*90/1020px*/
+}
+
+.var_wrap {
+	position: relative;
+}
+
+.var_imgs {
+	/* width: 100%; */
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.var_1 {
+	/* width: 610px; */
+	width: 59.803%;
+	background-color: #0ff;
+	background: no-repeat url("../img/var_01.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.var_1::before {
+	content: '';
+	display: block;
+	padding-top: 78.688%;/*480/610*/
+}
+
+.var_2 {
+	/* width: 305px; */
+	width: 29.901%;
+	margin-left: 5.882%; /*60/1020*/
+	margin-top: 23.529%; /*240/1020*/
+	background: no-repeat url("../img/var_03.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.var_2::before {
+	content: '';
+	display: block;
+	padding-top: 150.819%; /*460/305*/
+}
+
+.var_3 {
+	background: no-repeat url("../img/var_07.jpg");
+	/* width: 240px; */
+	width: 23.529%;
+	margin-top: -4.901%; /*50/1020*/
+	margin-left: 24.509%; /*250/1020*/
+	background-position: center;
+	background-size: cover;
+}
+
+.var_3::before {
+	content: '';
+	display: block;
+	padding-top: 141.666%; /*340/240*/
 }
 
 section.event {
@@ -636,7 +708,7 @@ section.event {
 	position: relative;
 	width: 49.019%; /*500px/1020px*/
 	background-color: #fff;
-	margin: 0 auto 80px;
+	margin: 0 auto 7.843%; /*80/1020*/
 	background: no-repeat url("../img/eventspace.jpg");
 	/* FIXME: ブレークポイントより小さいとき表示サイズによっては画像の解像度の方が低い */
 	background-size: cover; 
@@ -697,9 +769,14 @@ section.event {
 	margin-bottom: 6px;
 }
 
-.variety .base_btn, .event .base_btn {
+.event .base_btn {
 	width: 36.274% /*370px/1020*/;
 	margin: 0 auto 14px;
+}
+
+.variety .base_btn {
+	width: 100%;
+	margin: 0 auto 14px; 
 }
 
 section.news {
@@ -1199,6 +1276,16 @@ h2.term {
 	
 	#scene_3 .subtitle_fr:after, #scene_3 .subtitle_bk:after {
 		content: "Scene 3:\a As an interior";
+	}
+
+	#var_text {
+		margin-top: 7.843%; /*80/1020*/
+		position: static;
+		width: 100%;
+	}
+
+	.var_3 {
+		display: none;
 	}
 
   .service .service-item {
