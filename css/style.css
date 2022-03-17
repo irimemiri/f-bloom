@@ -400,7 +400,8 @@ small a:hover {
 	width: 100vw;
 	height: 100vh;
 	/*アドレスバー加味*/
-  /* min-height: calc(var(--vh, 1vh) * 100); */
+	min-height: 100vh; /* カスタムプロパティ未対応ブラウザ用のフォールバック */
+  min-height: calc(var(--vh, 1vh) * 100);
 	background-position: left;
 	background-repeat: no-repeat;
 	background-size: cover;

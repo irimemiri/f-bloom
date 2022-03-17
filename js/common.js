@@ -70,14 +70,14 @@ $(function(){
     once: true
   })
 
-  // function setHeight() {
-  //   var vh = window.innerHeight * 0.01;
-  //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-  // }
+  function setHeight() {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
 
   // Initialize
-  // setHeight();
-  // window.addEventListener('resize', setHeight);
+  setHeight();
+  window.addEventListener('resize', setHeight);
 
   //To transform hamberger menu
   function FixedAnime() {
