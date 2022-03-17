@@ -264,6 +264,7 @@ footer {
 	width: 82.894%;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	margin: 0 auto .7em;
 }
 
@@ -1344,6 +1345,10 @@ h2.term {
 
 	.scene_text h3 span {
 		font-size: 1.2rem;
+	}
+
+	.f_nav {
+		display: none;
 	}
 
 	/* About */
